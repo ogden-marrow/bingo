@@ -1,12 +1,12 @@
 /*jshint esversion: 6 */
 import express from 'express';
 const app = express();
-app.use(express.static(__dirname + '/public'));
+app.use();
 
 
 
 app.get('/', (req, res) => {
-    res.redirect('/charles');
+    res.redirect('/Web/index.html');
 });
 
 const port = process.env.PORT || 5656;
