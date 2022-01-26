@@ -1,4 +1,6 @@
+/*jshint esversion: 6 */
 function main() {
-console.log("Hello World!");
+    let mainSection = document.getElementById('main');
+    console.log(mainSection);
 }
 main();
