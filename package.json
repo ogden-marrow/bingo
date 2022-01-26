@@ -1,26 +1,26 @@
 {
-  "name": "bingo",
+  "name": "quick",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": ":) ",
   "scripts": {
-    "dev": "nodemon ./server.js"
+    "start": "nodemon --exec babel-node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ogden-marrow/bingo.git"
+    "url": ""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ogden-marrow/bingo/issues"
-  },
-  "homepage": "https://github.com/ogden-marrow/bingo#readme",
-  "devDependencies": {
-    "nodemon": "^2.0.15"
-  },
+  "author": "Aurel kurtula",
+  "license": "MIT",
+  "homepage": "",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "babel-preset-stage-3": "^6.22.0",
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-preset-es2015-node5": "*",
+    "babel-register": "*"
   }
 }
