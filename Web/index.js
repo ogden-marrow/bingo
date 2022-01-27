@@ -16,8 +16,8 @@ function CreatTable(data) {
             // node the contents of the <td>, and put the <td> at
             // the end of the table row
             let cell = document.createElement("td");
-            if (totalCount == 2) {
-                cellText = document.createTextNode("Free Space");
+            if (totalCount == 12) {
+                cellText = document.createTextNode("Free Space🤣");
             } else {
                 cellText = document.createTextNode(data[totalCount]);
             }
