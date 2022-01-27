@@ -10,9 +10,9 @@ button {
     margin: 4px 2px;
     cursor: pointer;
 }
-/* center a div */
-div{
+
+p{
     text-align: center;
-    font-size: x-large;
+    font-size: 3em;
     color: blueviolet;
 }
