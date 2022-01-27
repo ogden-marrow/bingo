@@ -8,7 +8,7 @@ import fetch from 'node-fetch';
 const __filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(__filename);
 app.use(json());
-const port = process.env.PORT || 3000;
+const port = 8080;
 
 app.get('/WordsAPI', (req, res) => {
     res.json(getRandomWords());
@@ -61,7 +61,7 @@ function getRandomWords() {
 }
 
 function testAPI() {
-    fetch('http://170.187.145.227:3000/WordsAPI')
+    fetch('http://170.187.145.227:'+port+'/WordsAPI')
         .then(res => res.json())
         .then(out => {
             out.forEach(element => {

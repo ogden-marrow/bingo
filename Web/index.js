@@ -41,7 +41,7 @@ function main() {
     console.log("johnfucks.com");
     console.log("why are you here " + new Date());
     console.log("johnfucks.com");
-    fetch('http://170.187.145.227:3000/WordsAPI')
+    fetch('http://170.187.145.227:8080/WordsAPI')
         .then(res => res.json())
         .then(out => CreatTable(out))
         .catch(err => console.log(err));
