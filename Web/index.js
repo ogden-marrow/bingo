@@ -38,7 +38,7 @@ function CreatTable(data) {
     tbl.setAttribute("border", "1");
 }
 function main() {
-    fetch('http://localhost:3000/WordsAPI')
+    fetch('http://170.187.145.227:3000/WordsAPI')
         .then(res => res.json())
         .then(out => CreatTable(out))
         .catch(err => console.log(err));

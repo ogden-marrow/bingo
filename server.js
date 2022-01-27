@@ -32,7 +32,7 @@ app.get('/style', (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+    console.log(`Example app listening at http://170.187.145.227:${port}`);
 });
 
 function getRandomWords() {
@@ -51,7 +51,7 @@ function getRandomWords() {
 }
 
 function testAPI() {
-    fetch('http://localhost:3000/WordsAPI')
+    fetch('http://170.187.145.227:3000/WordsAPI')
         .then(res => res.json())
         .then(out => {
             out.forEach(element => {
