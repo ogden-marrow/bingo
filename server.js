@@ -28,8 +28,8 @@ app.listen(port, () => {
 
 function getRandomWords() {
     let inWords = fs.readFileSync('Web/caleb.txt').toString().split("\n");
-    let outWords = new Array(24).fill(0);
-    for (let i = 0; i < 24; i++) {
+    let outWords = new Array(25).fill(0);
+    for (let i = 0; i < 25; i++) {
         let rand = Math.floor(Math.random() * inWords.length);
         outWords[i] = inWords[rand];
     }
