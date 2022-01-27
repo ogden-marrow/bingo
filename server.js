@@ -1,4 +1,4 @@
-/*jshint esversion: 6 */
+/*jshint esversion: 11 */
 import express, { json } from 'express';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -26,10 +26,20 @@ app.get('/script', (req, res) => {
     res.sendFile(dirname + '/Web/index.js');
 });
 
+app.get('/scriptWOTD', (req, res) => {
+    res.sendFile(dirname + '/Web/WOTD.js');
+});
+
 app.get('/style', (req, res) => {
     res.sendFile(dirname + '/Web/index.css');
 });
+app.get('/styleWOTD', (req, res) => {
+    res.sendFile(dirname + '/Web/WOTD.css');
+});
 
+app.get('/wordOfTheDay', (req, res) => {
+    res.sendFile(dirname + '/Web/WOTD.html');
+});
 
 app.listen(port, () => {
     console.log(`Example app listening at http://170.187.145.227:${port}`);
