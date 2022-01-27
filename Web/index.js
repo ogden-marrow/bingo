@@ -1,27 +1,31 @@
-/*jshint esversion: 6 */
-function main() {
+/*jshint esversion: 8 */
+function CreatTable(data) {
     // get the reference for the body
-    var body = document.getElementsByTagName("body")[0];
-
+    let body = document.getElementsByTagName("body")[0];
     // creates a <table> element and a <tbody> element
-    var tbl = document.createElement("table");
-    var tblBody = document.createElement("tbody");
-
+    let tbl = document.createElement("table");
+    let tblBody = document.createElement("tbody");
+    let totalCount = 0;
     // creating all cells
-    for (var i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {
+        let cellText = 0;
         // creates a table row
-        var row = document.createElement("tr");
-
-        for (var j = 0; j < 5; j++) {
+        let row = document.createElement("tr");
+        for (let j = 0; j < 5; j++) {
             // Create a <td> element and a text node, make the text
             // node the contents of the <td>, and put the <td> at
             // the end of the table row
-            var cell = document.createElement("td");
-            var cellText = document.createTextNode("cell in row " + i + ", column " + j);
+            let cell = document.createElement("td");
+            if (totalCount == 2) {
+                cellText = document.createTextNode("Free Space");
+            } else {
+                cellText = document.createTextNode(data[totalCount]);
+            }
             cell.appendChild(cellText);
             row.appendChild(cell);
+            totalCount++;
         }
-
+        row.style.padding = "50px 10px 20px 30px";
         // add the row to the end of the table body
         tblBody.appendChild(row);
     }
@@ -31,6 +35,12 @@ function main() {
     // appends <table> into <body>
     body.appendChild(tbl);
     // sets the border attribute of tbl to 2;
-    tbl.setAttribute("border", "2");
+    tbl.setAttribute("border", "1");
+}
+function main() {
+    fetch('http://localhost:3000/WordsAPI')
+        .then(res => res.json())
+        .then(out => CreatTable(out))
+        .catch(err => console.log(err));
 }
 main();
